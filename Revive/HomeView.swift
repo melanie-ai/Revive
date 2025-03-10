@@ -43,7 +43,7 @@ struct HomeView: View {
                                 .padding(.horizontal, 16)
                                 .padding(.vertical, 8)
                                 .background(selectedCategory == category ? Color.blue : Color(.systemGray5))
-                                .foregroundColor(selectedCategory == category ? .white : .black)
+                                                                .foregroundColor(selectedCategory == category ? .white : Color(.label))
                                 .cornerRadius(20)
                                 .onTapGesture {
                                     selectedCategory = category
@@ -65,6 +65,7 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("Explore")
+            .background(Color(.systemBackground))
         }
     }
 }
@@ -96,21 +97,24 @@ struct PropertyCard: View {
                 .clipped()
             Text(property.name)
                 .font(.headline)
+                .foregroundColor(Color(.label))
                 .lineLimit(1)
             Text(property.location)
                 .font(.subheadline)
-                .foregroundColor(.gray)
+                .foregroundColor(Color(.secondaryLabel))
             Text(property.price)
                 .font(.subheadline)
                 .bold()
                 .padding(.top, 5)
+                .foregroundColor(Color(.label))
         }
         .padding()
-        .background(Color.white)
+        .background(Color(.secondarySystemBackground)) // Adaptive card background
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
     }
 }
+
 #Preview {
     HomeView()
 }

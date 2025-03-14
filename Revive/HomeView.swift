@@ -12,10 +12,16 @@ struct HomeView: View {
     @State private var selectedCategory: String = "All"
     @State private var categories: [String] = ["All", "Beach", "Mountain", "City", "Countryside"]
     @State private var properties: [Property] = [
-        Property(id: 1, name: "Beachside Villa", location: "Malibu", price: "$200/night", image: "House1.jpg"),
-        Property(id: 2, name: "Mountain Cabin", location: "Aspen", price: "$150/night", image: "house2"),
-        Property(id: 3, name: "City Apartment", location: "New York", price: "$250/night", image: "house3"),
-        Property(id: 4, name: "Countryside Cottage", location: "Tuscany", price: "$180/night", image: "house4")
+        Property(id: 1, name:"Chill out at Petta's beachside Villa", location:"1298 Sycamore Street, Fairview, TX 75069",
+ price: "02/23/2025", image: "House1"),
+        Property(id: 2, name: "Mountain Cabin", location: "2217 Pinecrest Drive, Lakeshore, CA 96150", price: "$01/3/2025", image: "House2"),
+        Property(id: 3, name: "City Apartment", location:"482 Maplewood Lane, Brookhaven, NY 11719",
+ price: "2/21/2025", image: "House3"),
+        Property(id: 4, name: "Countryside Cottage", location: "8743 Willowbrook Court, Meadowvale, IL 60007", price: "07/15/2025", image: "House4"),
+        Property(id: 5, name: "Anyone up for a game?", location: "Malibu", price: "04/19/2025", image: "House5"),
+        Property(id: 6, name: "WATCH PARTY AT MY HOUSE!!", location: "NJ", price: "09/23/2025", image: "House6"),
+        Property(id: 7, name: "maing pasta&pizza anyone want some????", location: "New York", price: "$250/night", image: "House7"),
+        Property(id: 8, name: "Countryside Cottage", location: "Tuscany", price: "02/23/2025", image: "House8")
     ]
     
     var filteredProperties: [Property] {
@@ -43,7 +49,7 @@ struct HomeView: View {
                                 .padding(.horizontal, 16)
                                 .padding(.vertical, 8)
                                 .background(selectedCategory == category ? Color.blue : Color(.systemGray5))
-                                                                .foregroundColor(selectedCategory == category ? .white : Color(.label))
+                                .foregroundColor(selectedCategory == category ? .white : .black)
                                 .cornerRadius(20)
                                 .onTapGesture {
                                     selectedCategory = category
@@ -65,7 +71,6 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("Explore")
-            .background(Color(.systemBackground))
         }
     }
 }
@@ -92,29 +97,26 @@ struct PropertyCard: View {
             Image(property.image)
                 .resizable()
                 .scaledToFill()
-                .frame(height: 200)
+                .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
                 .clipped()
             Text(property.name)
                 .font(.headline)
-                .foregroundColor(Color(.label))
                 .lineLimit(1)
             Text(property.location)
                 .font(.subheadline)
-                .foregroundColor(Color(.secondaryLabel))
+                .foregroundColor(.gray)
             Text(property.price)
                 .font(.subheadline)
                 .bold()
                 .padding(.top, 5)
-                .foregroundColor(Color(.label))
         }
         .padding()
-        .background(Color(.secondarySystemBackground)) // Adaptive card background
+        .background(Color.white)
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
     }
 }
-
 #Preview {
     HomeView()
 }

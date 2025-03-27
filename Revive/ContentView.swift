@@ -36,6 +36,10 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
+            GroupChatView()
+                .tabItem {
+                    Label("Messages", systemImage: "message")
+                }
         }
     }
 }
@@ -49,7 +53,6 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             MainTabView()
                 .previewDisplayName("Full App")
-            
             HomeView()
                 .previewDisplayName("Home View")
             MapView()
@@ -60,6 +63,8 @@ struct ContentView_Previews: PreviewProvider {
                 .previewDisplayName("Therapy View")
             SettingsView()
                 .previewDisplayName("Settings View")
+            GroupChatView()
+                .previewDisplayName("MessagesBubbles")
             
         }
     }

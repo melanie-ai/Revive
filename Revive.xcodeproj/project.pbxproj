@@ -16,6 +16,8 @@
 		46CA55302D7B771E00103744 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA552F2D7B771E00103744 /* MapView.swift */; };
 		46CA55322D7B775A00103744 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA55312D7B775A00103744 /* HomeView.swift */; };
 		46CA55342D7B777900103744 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA55332D7B777900103744 /* Schedule.swift */; };
+		46CA55382D8C896000103744 /* MessageBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA55372D8C896000103744 /* MessageBubbles.swift */; };
+		46CA553B2D9475B400103744 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA553A2D9475B400103744 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		46CA552F2D7B771E00103744 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		46CA55312D7B775A00103744 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		46CA55332D7B777900103744 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		46CA55372D8C896000103744 /* MessageBubbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubbles.swift; sourceTree = "<group>"; };
+		46CA553A2D9475B400103744 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 		46CA551C2D7B767B00103744 /* Revive */ = {
 			isa = PBXGroup;
 			children = (
+				46CA55372D8C896000103744 /* MessageBubbles.swift */,
+				46CA553A2D9475B400103744 /* SwiftUIView.swift */,
 				46CA55332D7B777900103744 /* Schedule.swift */,
 				46CA55312D7B775A00103744 /* HomeView.swift */,
 				46CA551D2D7B767C00103744 /* ReviveApp.swift */,
@@ -154,7 +160,9 @@
 			files = (
 				46CA55202D7B767C00103744 /* ContentView.swift in Sources */,
 				46CA551E2D7B767C00103744 /* ReviveApp.swift in Sources */,
+				46CA553B2D9475B400103744 /* SwiftUIView.swift in Sources */,
 				46CA55302D7B771E00103744 /* MapView.swift in Sources */,
+				46CA55382D8C896000103744 /* MessageBubbles.swift in Sources */,
 				46CA55322D7B775A00103744 /* HomeView.swift in Sources */,
 				46CA552E2D7B76F100103744 /* Settings.swift in Sources */,
 				46CA55342D7B777900103744 /* Schedule.swift in Sources */,

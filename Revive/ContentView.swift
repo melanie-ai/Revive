@@ -19,7 +19,6 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
-            
             MapView()
                 .tabItem {
                     Label("Map", systemImage: "map.fill")
@@ -28,17 +27,13 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
                 }
-            TherapyMessagingView()
+            ChatListView()
                 .tabItem {
-                    Label("Therapy", systemImage: "message")
+                    Label("Messages", systemImage: "message")
                 }
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
-                }
-            GroupChatView()
-                .tabItem {
-                    Label("Messages", systemImage: "message")
                 }
         }
     }
@@ -59,12 +54,10 @@ struct ContentView_Previews: PreviewProvider {
                 .previewDisplayName("Map View")
             CalendarView()
                 .previewDisplayName("Calendar View")
-            TherapyMessagingView()
-                .previewDisplayName("Therapy View")
+            ChatListView()
+                .previewDisplayName("GroupChat View")
             SettingsView()
                 .previewDisplayName("Settings View")
-            GroupChatView()
-                .previewDisplayName("MessagesBubbles")
             
         }
     }
